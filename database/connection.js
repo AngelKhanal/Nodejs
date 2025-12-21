@@ -1,7 +1,8 @@
 const mongoose = require("mongoose")
 
+
 async function dbSangaConnectHu(){
-    await mongoose.connect("mongodb+srv://angel:easy@cluster0.tasznha.mongodb.net/?appName=Cluster0")
+    await mongoose.connect(process.env.connection_string) //process.env jata pani use garne ho
     console.log("DB connected successfully !!!")
 }
 
